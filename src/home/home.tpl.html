@@ -1,13 +1,24 @@
 <div class="jumbotron">
-  <h1>Welcome to AngularJS-LoginPage!</h1>
-  <p>Everybody can access this page:</p>
+  <h1 lang="en">Welcome to AngularJS-LoginPage!</h1>
+  <h1 lang="ru">Добро пожаловать в AngularJS-LoginPage!</h1>
+  <p lang="en">Everybody can access this page:</p>
+  <p lang="ru">Каждый желающий может получить доступ к этой странице:</p>
   <div ng-repeat="user in users">
     <h2>{{ user.name }}:</h2>
-    <div ng-class="{ 'text-info': user.userRole.title === 'user', 'text-danger': user.userRole.title === 'admin' }">
+    <div lang="en" ng-class="{ 'text-info': user.userRole.title === 'user', 'text-danger': user.userRole.title === 'admin' }">
       Username: {{ user.username }},
-      password: {{ user.password }},
-      email: {{ user.email }},
-      role: {{ user.userRole.title }}
+      Password: {{ user.password }},
+      Email: {{ user.email }},
+      Role: {{ user.userRole.title }}
+    </div>
+    <div lang="ru" ng-class="{ 'text-info': user.userRole.title === 'user', 'text-danger': user.userRole.title === 'admin' }">
+      Логин: {{ user.username }},
+      Пароль: {{ user.password }},
+      Email: {{ user.email }},
+      Роль: {{ user.userRole.title }}
     </div>
   </div>
+
 </div>
+
+

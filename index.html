@@ -18,7 +18,7 @@
 
   </head>
   <body ng-controller="BodyController">
-  <div id="containerLang" lang="en" dir="ltr">
+  <div id="containerLang" lang="en">
     <div class="container">
       <div class="navbar navbar-default" role="navigation">
         <div class="navbar-collapse">
@@ -38,7 +38,7 @@
             </li>
             <li ng-class="{ active: $state.is('app.register') }">
               <a ui-sref="app.register" lang="en">Register <i class="fa fa-user" ></i>+</a>
-              <a ui-sref="app.register"lang="ru">+<i class="fa fa-user"></i> Регистрация</a>
+              <a ui-sref="app.register" lang="ru">Регистрация <i class="fa fa-user" ></i>+</a>
             </li>
 
             <!--<li>-->
@@ -69,21 +69,34 @@
           </button>
           <!-- Logout Form -->
           <form class="navbar-form navbar-right" role="logout" ng-submit="logoutMe()" ng-show="ls.isLogged">
-            <div class="form-group">
-              <label>Hello {{ ls.user.name }}</label>
+            <div class="form-group" lang="en">
+              <label lang="en">Hello {{ ls.user.name }}</label>
             </div>
+            <div class="form-group" lang="ru">
+              <label lang="ru">Привет {{ ls.user.name }}</label>
+            </div>
+
+
             <div class="form-group">
-              <button  type="submit" class="btn btn-default"  >Logout <i class="fa fa-signout"></i></button>
+              <button  type="submit" class="btn btn-default" lang="en" >Logout <i class="fa fa-signout"></i></button>
+              <button  type="submit" class="btn btn-default" lang="ru" >Вийти <i class="fa fa-signout"></i></button>
             </div>
           </form>
         </div>
-        <div class="login-error" ng-class="{ 'active': login.wrong }">
-          <div class="alert alert-danger"><b>Error:</b> Please enter the correct data</div>
+        <div class="login-error" lang="en" ng-class="{ 'active': login.wrong }">
+          <div class="alert alert-danger" lang="en"><b>Error:</b> Please enter the correct data</div>
         </div>
+        <div class="login-error" lang="ru" ng-class="{ 'active': login.wrong }">
+          <div class="alert alert-danger" lang="ru"><b>Ошибка:</b> Пожалуйста, введите правильные данные</div>
+        </div>
+
       </div>
       <ui-view ng-hide="doingResolve"></ui-view>
-      <div class="jumbotron loading-jumbo" ng-show="doingResolve">
-        <h1><i class="fa fa-refresh fa-1x fa-spin"></i> Loading..</h1>
+      <div class="jumbotron loading-jumbo" ng-show="doingResolve" lang="en">
+        <h1 lang="en"><i class="fa fa-refresh fa-1x fa-spin"></i> Loading..</h1>
+      </div>
+      <div class="jumbotron loading-jumbo" ng-show="doingResolve" lang="ru">
+        <h1 lang="ru"><i class="fa fa-refresh fa-1x fa-spin"></i> Загрузка..</h1>
       </div>
       <!--Footer -->
       <div class="panel panel-default" style="margin-top: 30px">
@@ -94,24 +107,16 @@
     </div>
 
 
-
-    <!--<div id="containerLang" lang="en" dir="ltr">-->
-
       <div id="langChange">
-        <input type="radio" name="l" id="toAr"/>
-        <label for="toAr" onclick="document.getElementById('containerLang').lang = 'ru'; document.getElementById('containerLang').dir = 'rtl'; "></label>
+        <input type="radio" name="l" id="toRu"/>
+        <label for="toRu" onclick="document.getElementById('containerLang').lang = 'ru'; document.getElementById('containerLang')"></label>
         <input type="radio" name="l" id="toEn" checked/>
-        <label for="toEn" onclick="document.getElementById('containerLang').lang = 'en'; document.getElementById('containerLang').dir = 'ltr'; " ></label>
+        <label for="toEn" onclick="document.getElementById('containerLang').lang = 'en'; document.getElementById('containerLang')" ></label>
       </div>
 
-
-        <span lang="en" ui-sref="app.admin">DIMAS</span>
-        <span lang="ru">ДИМА</span>
-
-      <div lang="en">Zelenyuk</div>
-      <div lang="ru">зеленюк</div>
-
     </div>
+
+
 
 
   </body>

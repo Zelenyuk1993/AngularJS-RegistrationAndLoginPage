@@ -1,8 +1,12 @@
 <div class="jumbotron">
-  <h1>Error</h1>
+  <h1 lang="en">Error</h1>
+  <h1 lang="ru">Ошибка</h1>
   <div ng-switch="$stateParams.error">
-    <p class="text-danger" ng-switch-when="unauthorized">You are not authorized</p>
-    <p class="text-danger" ng-switch-when="401">You are not authorized</p>
-    <p class="text-danger" ng-switch-default>Some error has occurred</p>
+    <p class="text-danger" ng-switch-when="unauthorized" lang="en">You are not authorized</p>
+    <p class="text-danger" ng-switch-when="unauthorized" lang="ru">Вы не авторизованы</p>
+    <p class="text-danger" ng-switch-when="401" lang="en">You are not authorized</p>
+    <p class="text-danger" ng-switch-when="401" lang="ru">Вы не авторизованы</p>
+    <p class="text-danger" ng-switch-default lang="en">Some error has occurred</p>
+    <p class="text-danger" ng-switch-default lang="ru">Некоторые ошибка</p>
   </div>
 </div>

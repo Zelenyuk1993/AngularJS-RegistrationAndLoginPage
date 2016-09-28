@@ -1,4 +1,4 @@
-AngularJS-LoginPage 
+AngularJS-RegistrationAndLoginPage
 ===================
 
 # Start the project locally

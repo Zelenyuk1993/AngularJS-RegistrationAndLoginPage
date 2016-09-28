@@ -1,0 +1,13 @@
+<div class="jumbotron">
+  <h1>Welcome to AngularJS-LoginPage!</h1>
+  <p>Everybody can access this page:</p>
+  <div ng-repeat="user in users">
+    <h2>{{ user.name }}:</h2>
+    <div ng-class="{ 'text-info': user.userRole.title === 'user', 'text-danger': user.userRole.title === 'admin' }">
+      Username: {{ user.username }},
+      password: {{ user.password }},
+      email: {{ user.email }},
+      role: {{ user.userRole.title }}
+    </div>
+  </div>
+</div>

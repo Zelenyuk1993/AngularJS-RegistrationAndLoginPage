@@ -1,0 +1,139 @@
+@import 'libs/bootstrap/less/mixins.less';
+@import 'libs/bootstrap/less/variables.less';
+@import 'src/register/register.less';
+
+.container {
+  -webkit-backface-visibility: hidden;
+}
+.loading-jumbo {
+  text-align: center;
+  cursor: progress;
+}
+
+.hidden-devices {
+  @media (max-width: @screen-sm-max) {
+    .responsive-invisibility();
+  }
+}
+
+.login-error {
+  height: 0;
+  overflow: hidden;
+  transition: height 1s;
+  &.active {
+    height: 50px;
+  }
+}
+
+
+
+.language{
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+.btn {
+  transition-duration: .5s;
+  transition-property: color, background-color;
+  transition-timing-function: ease;
+}
+
+.jumbotron {
+  h1 {
+    text-shadow: 1px 1px 1px grey;
+  }
+}
+
+
+
+
+
+
+
+
+
+#containerLang {
+  text-align: center;
+
+}
+
+
+
+#containerLang[lang="en"] div:lang(ru) {
+  display: none !important;
+}
+#containerLang[lang="ru"] div:lang(en) {
+  display: none !important;
+}
+
+#containerLang[lang="en"] span:lang(ru) {
+  display: none !important;
+}
+#containerLang[lang="ru"] span:lang(en) {
+  display: none !important;
+}
+
+#containerLang[lang="en"] a:lang(ru) {
+  display: none !important;
+}
+#containerLang[lang="ru"] a:lang(en) {
+  display: none !important;
+}
+
+#containerLang[lang="en"] i:lang(ru) {
+  display: none !important;
+}
+#containerLang[lang="ru"] i:lang(en) {
+  display: none !important;
+}
+#containerLang[lang="en"] input:lang(ru) {
+  display: none !important;
+}
+#containerLang[lang="ru"] input:lang(en) {
+  display: none !important;
+}
+#containerLang[lang="en"] button:lang(ru) {
+  display: none !important;
+}
+#containerLang[lang="ru"] button:lang(en) {
+  display: none !important;
+}
+
+
+
+/* hide radio */
+#langChange input[type="radio"] {
+  position: absolute;
+  left: -200em;
+}
+/* styling the div and labels */
+#langChange {
+  position: absolute;
+  left: 0;
+}
+#langChange label {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  padding: .5em;
+  color: #3b5998;
+  background: #ccc;
+  border-radius: 0 .4em .4em 0;
+  cursor: pointer;
+}
+#langChange label~label {
+  top: 60px;
+}
+#langChange input[type="radio"]:checked + label {
+  color: white;
+  background: #3b5998;
+}
+#langChange label[for="toEn"]:after {
+  content: "eng";
+}
+#langChange label[for="toAr"]:after {
+  content: "rus";
+}
+
+
+

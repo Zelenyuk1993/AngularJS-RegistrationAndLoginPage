@@ -1,6 +1,10 @@
 {
   "name": "AngularJS-RegistrationAndLoginPage",
+  "version": "0.1.0",
   "keywords": [
+    "node",
+    "heroku",
+    "express",
     "angularjs",
     "angular",
     "login",

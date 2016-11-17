@@ -9,6 +9,7 @@ AngularJS-RegistrationAndLoginPage
 $ git clone https://github.com/dim4k1993/AngularJS-LoginPage.git
 $ cd AngularJS-RegistrationAndLoginPage
 $ npm install 
+$ bower install
 $ npm install -g bower
 $ npm install -g grunt-cli
 $ grunt
